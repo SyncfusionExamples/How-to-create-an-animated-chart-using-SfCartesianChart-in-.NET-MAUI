@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:model="clr-namespace:AnimatedChart"
+             x:Class="AnimatedChart.MainPage">
+
+    <ContentPage.BindingContext>
+        <model:ChartViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+
+    <Border BackgroundColor="#fbf5ff" Stroke="#410764" Padding="5" StrokeShape="RoundRectangle 10" Margin="30" StrokeThickness="2">
+
+        <chart:SfCartesianChart>
+
+            <chart:SfCartesianChart.Title>
+                <Frame Padding="0" HasShadow="False" BackgroundColor="Transparent" WidthRequest="140" 
+                       HorizontalOptions="End" BorderColor="Transparent" CornerRadius="10">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                            <GradientStop Color="#B75EF8" Offset="0.2"/>
+                            <GradientStop Color="#7642A9" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <Button Text="Add Data Point" Clicked="Animation_Clicked" TextColor="White" Background="Transparent"/>
+                </Frame>
+            </chart:SfCartesianChart.Title>
+
+            <chart:SfCartesianChart.XAxes>
+                <chart:CategoryAxis LabelPlacement="BetweenTicks" ShowMajorGridLines="False">
+                    <chart:CategoryAxis.MajorTickStyle>
+                        <chart:ChartAxisTickStyle TickSize="0" />
+                    </chart:CategoryAxis.MajorTickStyle>
+                    <chart:CategoryAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeWidth="0" />
+                    </chart:CategoryAxis.AxisLineStyle>
+                    <chart:CategoryAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle TextColor="Black"/>
+                    </chart:CategoryAxis.LabelStyle>
+                </chart:CategoryAxis>
+            </chart:SfCartesianChart.XAxes>
+
+            <chart:SfCartesianChart.YAxes>
+                <chart:NumericalAxis ShowMajorGridLines="False" PlotOffsetStart="12" PlotOffsetEnd="6" Minimum="0" Interval="20" Maximum="100">
+                    <chart:NumericalAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle LabelFormat="#0'%'" TextColor="Black"/>
+                    </chart:NumericalAxis.LabelStyle>
+                    <chart:NumericalAxis.MajorTickStyle>
+                        <chart:ChartAxisTickStyle TickSize="0"/>
+                    </chart:NumericalAxis.MajorTickStyle>
+                    <chart:NumericalAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeWidth="0" />
+                    </chart:NumericalAxis.AxisLineStyle>
+                </chart:NumericalAxis>
+            </chart:SfCartesianChart.YAxes>
+
+            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Month" YBindingPath="Value" 
+                            Spacing="0.3" Width="0.6" EnableAnimation="True" CornerRadius="30">
+                <chart:ColumnSeries.Fill>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#B75EF8" Offset="0.2"/>
+                        <GradientStop Color="#7642A9" Offset="1"/>
+                    </LinearGradientBrush>
+                </chart:ColumnSeries.Fill>
+            </chart:ColumnSeries>
+
+        </chart:SfCartesianChart>
+    </Border>
+</ContentPage>
