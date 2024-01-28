@@ -54,7 +54,7 @@
                 </chart:NumericalAxis>
             </chart:SfCartesianChart.YAxes>
 
-            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Month" YBindingPath="Value" 
+            <chart:ColumnSeries x:Name="series" ItemsSource="{Binding Data1}" XBindingPath="Month" YBindingPath="Value" 
                             Spacing="0.3" Width="0.6" EnableAnimation="True" CornerRadius="30">
                 <chart:ColumnSeries.Fill>
                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
