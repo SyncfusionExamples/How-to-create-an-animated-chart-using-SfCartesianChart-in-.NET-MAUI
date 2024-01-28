@@ -22,7 +22,7 @@
                             <GradientStop Color="#7642A9" Offset="1"/>
                         </LinearGradientBrush>
                     </Frame.Background>
-                    <Button Text="Add Data Point" Clicked="Animation_Clicked" TextColor="White" Background="Transparent"/>
+                    <Button Text="Update Data" Clicked="Animation_Clicked" TextColor="White" Background="Transparent"/>
                 </Frame>
             </chart:SfCartesianChart.Title>
 
