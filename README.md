@@ -10,4 +10,4 @@ The following demo visualizes how to animate the [.NET MAUI Caretaisn Chart](htt
 ### Path too long exception
 If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
 
-For more details, refer to the KB on [How to create an animated chart (SfCartesianChart) in .NET MAUI?]()
+For more details, refer to the KB on [How to create an animated chart (SfCartesianChart) in .NET MAUI?](https://support.syncfusion.com/kb/article/14943/how-to-create-an-animated-chart-sfcartesianchart-in-net-maui-)
