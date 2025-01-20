@@ -1,8 +1,8 @@
 # How to create an animated chart using SfCartesianChart in .NET MAUI?
 	
-The.NET MAUI Cartesian Chart will animate seamlessly in two ways: when you first load the chart or when you redraw it after modifying the data points. This section provides insights into both methods of animating the chart control.
+The [.NET MAUI Cartesian Chart](https://help.syncfusion.com/maui/cartesian-charts/getting-started) will animate seamlessly in two ways: when you first load the chart or when you redraw it after modifying the data points. This section provides insights into both methods of animating the chart control.
 
-* We can smoothly animate the chart at loading by setting the `EnableAnimation` property to True.
+* We can smoothly animate the chart at loading by setting the [EnableAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableAnimation) property to True.
 * The SfCartesianChart provides seamless animation when dynamically changing data points.
 
 
